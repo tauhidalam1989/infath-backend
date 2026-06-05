@@ -1,0 +1,52 @@
+{
+  "name": "screening-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Screening System with Network Scanning",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "npx nodemon --exec npx ts-node src/server.ts",
+    "build": "tsc && node -e \"require('fs').cpSync('player','dist/player',{recursive:true})\"",
+    "watch": "tsc --watch",
+    "grant-db": "node scripts/run-grant-permissions.js",
+    "migrate": "npx ts-node -e \"import { testConnection, initializeDatabase, pool } from './src/config/database'; testConnection().then(ok => { if (!ok) process.exit(1); return initializeDatabase(); }).then(() => pool.end()).catch(e => { console.error(e); process.exit(1); });\""
+  },
+  "keywords": [
+    "screening",
+    "network-scanning",
+    "android-tv"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/multer": "^2.0.0",
+    "@types/uuid": "^10.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.0.2",
+    "node-fetch": "^2.7.0",
+    "pg": "^8.16.3",
+    "ping": "^0.4.4",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.7.2",
+    "speakeasy": "^2.0.0",
+    "ssh2": "^1.17.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.11.30",
+    "@types/pg": "^8.15.6",
+    "@types/ping": "^0.4.4",
+    "@types/qrcode": "^1.5.6",
+    "@types/speakeasy": "^2.0.10",
+    "@types/ssh2": "^1.15.5",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Screening Player",
+  "short_name": "Player",
+  "description": "Screening player for displays – mobile and Android TV.",
+  "start_url": "/player/index.html",
+  "scope": "/player/",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "categories": ["entertainment", "productivity"],
+  "icons": []
+}

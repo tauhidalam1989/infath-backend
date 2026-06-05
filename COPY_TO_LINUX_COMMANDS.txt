@@ -1,0 +1,32 @@
+============================================
+COPY THESE COMMANDS TO YOUR LINUX DEVICE
+Run them one by one on Ubuntu (192.168.1.7)
+============================================
+
+# Step 1: Create .ssh directory
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
+# Step 2: Add your public key
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoWQHrZidw+VzVRhGgZ+YUknpNEJEfrlunm6RS1/WvbySkcr//4lRkeb2UevSdBd8keRri1FYnIpsATk0JMYekZfec3ugeDKEBae0O7EMtaZ1MOrQZjrgXf+nsyzdUE8bOSbmRO+o+TcFiNh5IeMS4R/YehuueZVw3fgthoh/SPGa6HaOIX1+yO5hprIjUJT5Uph6aPfdjalix2cphki9D20aleobZP13rUNTRvVeOKh5u2TKksht/ZZJZTwl9HEnfWZDKu+BBN0aSrHR9KxAkgP28+iFDPXEO2A5XnQcXgxXDfNO802kJ1u27XA3wetT3C2Poe63yCnKtcv2xBU/X7I3zgnPB6KUPTytgDUzY+ouDajPMGsrM/QKLYlofpACUIXSsdQqwbC33SwNoRdO4ug+dI6p8wRWhq74SCSMPTgQgZcD5uMomPVmG1iZZ+NImSCgbhRidiZFKHyz1oW35rwZACAXuKKKHkZCi5Rm6cf5NYDqgRCjiDKuMVwDqlJhueKd4g8PkIVToq877eQoQqolv8Q5YDjisleNtC65k0Vzu7VVVqGBvbZ6Ebi2InlUKUzLPfxTcFdNcpy9Z87Rnx9qdON3PVQlamkYCOhjb2HyZ+0UUGtD/rnTYmW+FqNY4a/UiTlsj1rquHWJcGIV435XRuKFyez00qqeM5KViMw== jainishali@jainishs-MacBook-Air.local" >> ~/.ssh/authorized_keys
+
+# Step 3: Set correct permissions
+chmod 600 ~/.ssh/authorized_keys
+
+# Step 4: Verify (optional)
+ls -la ~/.ssh/
+
+============================================
+AFTER RUNNING THESE COMMANDS:
+============================================
+
+1. Go back to your MacBook
+2. Test SSH connection:
+   ssh jainishali@192.168.1.7
+
+3. If it connects without password, you're done!
+4. Restart your backend server
+5. Try playing video again
+
+============================================
+
